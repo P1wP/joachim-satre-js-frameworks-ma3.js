@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
+import Heading from "./components/Heading";
+import HomeContent from "./components/home/HomeContent";
+import NewsList from "./components/news/NewsList";
+import Login from "./components/login/LoginForm";
+import Layout from "./components/layout/Layout";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Layout>
+        <Heading title="Heading.js" />
+        <HomeContent> HomeContent.js: Whatever I write between these tags will render inside a div  </HomeContent>
+        <NewsList />
+        <Login />
+        </Layout>
     </div>
   );
 }
