@@ -10,7 +10,7 @@ const schema = yup.object().shape({
         .required("First name is required"),
     passWord: yup
         .string()
-        .length(4, "Password must be minimum 4 characters")
+        .min(4, "Password must be minimum 4 characters")
         .required("Password is required")
 })
 
